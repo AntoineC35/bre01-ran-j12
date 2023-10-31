@@ -1,18 +1,16 @@
 <?php
     session_start();
+     $_SESSION['heroName'] = isset($_GET['heroName']) ? $_GET['heroName'] : "Héros";
     
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['choice'])) {
         $choice = $_GET['choice'];
         switch ($choice) {
             case 'choice-1':
-                header('Location: page2.3.1.phtml');
+                header('Location: page3.1.phtml');
                 exit;
             case 'choice-2':
-                header('Location: page2.3.2.phtml');
-                exit;
-            case 'choice-3':
-                header('Location: page2.3.3.phtml');
+                header('Location: page3.2.phtml');
                 exit;
             default:
         }
@@ -35,20 +33,16 @@
 <body id="choice">
 <main>
     <section>
-        <h2>Repas, combat ou secours ?</h2>
+        <h2>Par ou vas t'on ?</h2>
         <div>
             <form method="get" action="">
                 <div>
                     <input type="radio" id="choice-1" name="choice" value="choice-1">
-                    <label for="choice-1">Lui donner à boire & à manger</label>
+                    <label for="choice-1">Cap des jumeaux</label>
                 </div>
                 <div>
                     <input type="radio" id="choice-2" name="choice" value="choice-2">
-                    <label for="choice-2">Mettre fin à ses jours</label>
-                </div>
-                <div>
-                    <input type="radio" id="choice-3" name="choice" value="choice-3">
-                    <label for="choice-3">le détacher</label>
+                    <label for="choice-2">Calm Belt</label>
                 </div>
                 <div>
                     <input type="submit" value="Valider le choix" />
@@ -58,8 +52,8 @@
     </section>
     <section>
         <section>
-            <img src="https://media.giphy.com/media/iNiHLhB3jAcaJKzWPk/giphy.gif" />
-            <h1>Vous arrivez dans la base marine d'une petite île, la ou est retenu le sanguinolant chasseur de pirate Zorro. Il est la attaché a une croix dans la cour de la marine.</h1>
+            <img src="assets/img/door.png" />
+            <h1>Courir c'est ce qu'il a mieux a faire quand on tombe sur un monstre de fumée ! Pas de temps a perdre direction ?</h1>
         </section>
     </section>
 </main>

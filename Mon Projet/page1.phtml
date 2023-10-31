@@ -1,5 +1,28 @@
 <?php
-    $heroName = isset($_GET['heroName']) ? $_GET['heroName'] : "Héros";
+    session_start();
+    
+    $_SESSION['heroName'] = isset($_GET['heroName']) ? $_GET['heroName'] : "Héros";
+    
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    if (isset($_GET['choice'])) {
+        $choice = $_GET['choice'];
+        switch ($choice) {
+            case 'choice-1':
+                header('Location: page2.phtml');
+                exit;
+            case 'choice-2':
+                header('Location: page3.phtml');
+                exit;
+            case 'choice-3':
+                header('Location: page4.phtml');
+                exit;
+            case 'choice-4': 
+                header('Location: page5.phtml');
+                exit;
+            default:
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,20 +40,24 @@
 <body id="choice">
 <main>
     <section>
-        <h2>Description du choix à faire</h2>
+        <h2>Allez-vous embarquer pour </h2>
         <div>
             <form method="get" action="">
                 <div>
                     <input type="radio" id="choice-1" name="choice" value="choice-1">
-                    <label for="page2.phtml">Choix 1</label>
+                    <label for="choice-1">East Blue</label>
                 </div>
                 <div>
                     <input type="radio" id="choice-2" name="choice" value="choice-2">
-                    <label for="page3.phtml">Choix 2</label>
+                    <label for="choice-2">Grand Line</label>
                 </div>
                 <div>
                     <input type="radio" id="choice-3" name="choice" value="choice-3">
-                    <label for="page4.phtml">Choix 3</label>
+                    <label for="choice-3">Le Nouveau Monde</label>
+                </div>
+                <div>
+                    <input type="radio" id="choice-4" name="choice" value="choice-4">
+                    <label for="choice-4">Laugh Tale</label>
                 </div>
                 <div>
                     <input type="submit" value="Valider le choix" />
@@ -41,7 +68,7 @@
     <section>
         <section>
             <img src="assets/img/door.png" />
-            <h1>Vous arrivez dans une cale de bateau, caché dans un tonneau, malheureusement <?php echo $heroName; ?> vous attrapez le scorbut</h1>
+            <h1>Vous êtes confronté à une mer infinie d'opportunités et de dangers, mais une aventure extraordinaire vous attend. Alors que vous contemplez l'horizon, prêt à lever l'ancre, trois chemins se dessinent devant vous.</h1>
         </section>
     </section>
 </main>

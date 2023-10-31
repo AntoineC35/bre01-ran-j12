@@ -1,5 +1,23 @@
 <?php
-    $heroName = isset($_GET['heroName']) ? $_GET['heroName'] : "Héros";
+    session_start();
+    
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    if (isset($_GET['choice'])) {
+        $choice = $_GET['choice'];
+        switch ($choice) {
+            case 'choice-1':
+                header('Location: page2.phtml');
+                exit;
+            case 'choice-2':
+                header('Location: page3.phtml');
+                exit;
+            case 'choice-3':
+                header('Location: page4.phtml');
+                exit;
+            default:
+        }
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +59,7 @@
     <section>
         <section>
             <img src="assets/img/door.png" />
-            <h1>PAGE 4 BLABLA <?php echo $heroName; ?> vous attrapez le scorbut</h1>
+            <h1>PAGE 4 BLABLA <?php echo $_SESSION['heroName']; ?> vous attrapez le scorbut</h1>
         </section>
     </section>
 </main>

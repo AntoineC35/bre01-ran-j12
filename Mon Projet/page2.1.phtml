@@ -6,13 +6,13 @@
         $choice = $_GET['choice'];
         switch ($choice) {
             case 'choice-1':
-                header('Location: page2.phtml');
+                header('Location: page2.1.1.phtml');
                 exit;
             case 'choice-2':
-                header('Location: page3.phtml');
+                header('Location: page2.1.2.phtml');
                 exit;
             case 'choice-3':
-                header('Location: page4.phtml');
+                header('Location: page2.1.3.phtml');
                 exit;
             default:
         }
@@ -35,20 +35,20 @@
 <body id="choice">
 <main>
     <section>
-        <h2>Description du choix à faire</h2>
+        <h2>Repas, pillage ou recrutement ?</h2>
         <div>
             <form method="get" action="">
                 <div>
                     <input type="radio" id="choice-1" name="choice" value="choice-1">
-                    <label for="choice-1">Choix 1</label>
+                    <label for="choice-1">On deguste le homard de Zeff</label>
                 </div>
                 <div>
                     <input type="radio" id="choice-2" name="choice" value="choice-2">
-                    <label for="choice-2">Choix 2</label>
+                    <label for="choice-2">A l'abordage ce bateau poisson resto est a nous !</label>
                 </div>
                 <div>
                     <input type="radio" id="choice-3" name="choice" value="choice-3">
-                    <label for="choice-3">Choix 3</label>
+                    <label for="choice-3">Rejoins l'équipage Sanji !</label>
                 </div>
                 <div>
                     <input type="submit" value="Valider le choix" />
@@ -58,8 +58,8 @@
     </section>
     <section>
         <section>
-            <img src="assets/img/door.png" />
-            <h1>PAGE 3 BLABLA <?php echo $_SESSION['heroName']; ?> vous attrapez le scorbut</h1>
+            <img src="https://media.giphy.com/media/iNiHLhB3jAcaJKzWPk/giphy.gif" />
+            <h1>Au restaurant flottant Baratie, trois options s'offrent à vous. Vous pourriez décider de savourer un repas préparé par Zeff, le chef légendaire de l'établissement. Une autre tentation pourrait être de tenter de voler le bateau poisson du Baratie pour vous échapper avec un butin potentiel. Enfin, vous pourriez aussi envisager de recruter Sandji, le maître d'armes du navire, pour rejoindre votre propre équipage.</h1>
         </section>
     </section>
 </main>

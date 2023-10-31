@@ -6,13 +6,13 @@
         $choice = $_GET['choice'];
         switch ($choice) {
             case 'choice-1':
-                header('Location: page2.phtml');
+                header('Location: page5.phtml');
                 exit;
             case 'choice-2':
-                header('Location: page3.phtml');
+                header('Location: page6.phtml');
                 exit;
             case 'choice-3':
-                header('Location: page4.phtml');
+                header('Location: page7.phtml');
                 exit;
             default:
         }
@@ -35,20 +35,20 @@
 <body id="choice">
 <main>
     <section>
-        <h2>Description du choix à faire</h2>
+        <h2>Repas, combat ou secours ?</h2>
         <div>
             <form method="get" action="">
                 <div>
                     <input type="radio" id="choice-1" name="choice" value="choice-1">
-                    <label for="choice-1">Choix 1</label>
+                    <label for="choice-1">On s'arrete manger au Baratie</label>
                 </div>
                 <div>
                     <input type="radio" id="choice-2" name="choice" value="choice-2">
-                    <label for="choice-2">Choix 2</label>
+                    <label for="choice-2">Combat contre Arlong l'Homme-Poisson</label>
                 </div>
                 <div>
                     <input type="radio" id="choice-3" name="choice" value="choice-3">
-                    <label for="choice-3">Choix 3</label>
+                    <label for="choice-3">Secourir Zorro, le Chasseur de Pirates</label>
                 </div>
                 <div>
                     <input type="submit" value="Valider le choix" />
@@ -58,8 +58,8 @@
     </section>
     <section>
         <section>
-            <img src="assets/img/door.png" />
-            <h1>PAGE 3 BLABLA <?php echo $_SESSION['heroName']; ?> vous attrapez le scorbut</h1>
+            <img src="https://media.giphy.com/media/iNiHLhB3jAcaJKzWPk/giphy.gif" />
+            <h1>C'est ici que commence votre aventure, dans cet endroit en apparence tranquille, mais où le danger guette dans l'ombre. East Blue est le point de départ de votre quête légendaire.</h1>
         </section>
     </section>
 </main>

@@ -1,6 +1,6 @@
 <?php
     session_start();
-     $_SESSION['heroName'] = isset($_GET['heroName']) ? $_GET['heroName'] : "Héros";
+     $heroName = $_SESSION['heroName'];
     
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['choice'])) {

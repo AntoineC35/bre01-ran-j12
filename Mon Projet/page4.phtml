@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $heroName = $_SESSION['heroName'];
     
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['choice'])) {
@@ -26,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body id="choice">
+<body id="choice-dark-blue">
 <main>
     <section>
         <h2>Fin d'aventure !</h2>

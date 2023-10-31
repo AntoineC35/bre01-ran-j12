@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $heroName = $_SESSION['heroName'];   
     
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['choice'])) {

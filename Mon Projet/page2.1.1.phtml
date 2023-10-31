@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $heroName = $_SESSION['heroName'];
     
     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (isset($_GET['choice'])) {
@@ -26,7 +27,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body id="choice">
+<body id="choice-dark-blue">
 <main>
     <section>
         <h2>Fin d'aventure !</h2>
@@ -44,7 +45,7 @@
     </section>
     <section>
         <section>
-            <img src="https://media.giphy.com/media/iNiHLhB3jAcaJKzWPk/giphy.gif" />
+            <img src="https://media.giphy.com/media/u0SQkPClLiBry/giphy.gif" />
             <h1>Après avoir dégusté le repas de Zeff au Baratie, vous commencez soudainement à vous sentir mal. Une douleur intense dans votre estomac s'aggrave rapidement, et vous réalisez que le plat était empoisonné. Vous perdez connaissance, et tout ce que vous voyez avant de sombrer dans l'inconscience, c'est le sourire sadique du chef Zeff. Votre aventure s'achève ici, victime d'une trahison culinaire mortelle.</h1>
         </section>
     </section>
